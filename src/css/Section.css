@@ -1,0 +1,112 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center; 
+  
+}
+
+
+
+.nav-pills-step {
+  display: flex;
+  list-style: none;
+  padding: 20px;
+  justify-content: center;
+  align-items: center; 
+}
+
+
+.nav-item {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-item.active {
+  background-color: #3a3a4a;
+  color: white;
+}
+
+.num {
+  margin-right: 5px;
+}
+.section-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+.pscheck-box1{
+  padding-bottom: 15px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.pscheck-box2{
+  padding: 15px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.pschecks{
+  color: red;
+  font-weight: bold;
+}
+
+
+.nextBtt{
+  margin-top: 20px;
+  background-color: rgb(189, 92, 92);
+  border-radius: 25px;
+}
+
+.Allcheckdss{
+  padding-top: 7px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Section2 */
+.section2-title{
+  border-bottom: 2px solid rgb(122, 120, 120);
+  padding-bottom: 15px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.signup-info {
+  width: 500px;
+  margin: auto;
+  text-align: left;
+}
+
+.signup-info span{
+  font-size: 25px;
+  
+}
+
+.signup-info div{
+   border-bottom: 1px solid rgb(122, 120, 120);
+  padding-bottom: 12px;
+}
+
+.label-id input {
+  width: 250px;
+  height: 25px;
+  border: none; 
+  border-bottom: 1px solid #ccc; 
+  background: none; 
+  outline: none; 
+}
+
+.input-button{
+  width: 300px;
+  height: 30px;
+  background-color: #deb1d7;
+  border-radius: 4px;
+}
