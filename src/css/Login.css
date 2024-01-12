@@ -1,15 +1,18 @@
 
-#content {
+.login-container {
     align-items: center;
     justify-content: center;
     height: 100vh;
     width: 500px;
     margin: auto;
+    padding-top: 15px;
+
   }
   
   .layout {
     width: 100%;
-    max-width: 1200px;
+    max-width: 100px;
+
   }
   
   h2 {
@@ -58,6 +61,7 @@
     cursor: pointer;
     border-radius: 20px;
     background-color: rgb(189, 92, 92);
+    margin-left: 89px;
   }
   
   .btn-primary:hover {
@@ -82,22 +86,8 @@
     border-radius: 4px;
     font-size: 14px;
   }
-  .aaaaa {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
-  }
-  
-
   .findPd{
     padding-left: 10px;
   }
   
-
-  .aaaaa{
-    max-width: 1400px;
-  }
-
   

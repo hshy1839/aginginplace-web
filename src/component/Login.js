@@ -15,8 +15,8 @@ const Login = () => {
   };
 
   return (
-    <div className='aaaaa'>
-      <div id="content">
+    <div className='login-container'>
+      <div>
         <div className="login-layout">
           <h2 className='login-lg'>로그인</h2>
 
