@@ -16,7 +16,6 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        {/* 모든 페이지에서 공통으로 헤더를 렌더링 */}
         <Header />
         <Routes>
           <Route path="/main" element={<Main />} />
@@ -29,7 +28,6 @@ function App() {
           <Route path="/cmss" element={<Cmss />} />
           <Route path="/cms" element={<Cms />} />
         </Routes>
-        {/* 모든 페이지에서 공통으로 푸터를 렌더링 */}
         <Footer />
       </div>
     </BrowserRouter>
