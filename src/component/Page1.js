@@ -3,7 +3,7 @@ import React from 'react';
 const Page1 = () => {
   return (
     <footer>
-      <p>page1 내용입니다.</p>
+      <p>복욕 알림 및 설정 Page.</p>
     </footer>
   );
 };

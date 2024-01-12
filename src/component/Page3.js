@@ -3,7 +3,7 @@ import React from 'react';
 const Page3 = () => {
   return (
     <footer>
-      <p>page3 내용입니다.</p>
+      <p>프로그램 콘텐츠 제공 Page.</p>
     </footer>
   );
 };

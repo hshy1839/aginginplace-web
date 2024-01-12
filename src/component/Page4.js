@@ -3,7 +3,7 @@ import React from 'react';
 const Page4 = () => {
   return (
     <footer>
-      <p>page4 내용입니다.</p>
+      <p>커뮤니티 및 건강삼담실 Page.</p>
     </footer>
   );
 };
