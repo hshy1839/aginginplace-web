@@ -9,6 +9,7 @@ import Page1 from './component/Page1';
 import Page2 from './component/Page2';
 import Page3 from './component/Page3';
 import Page4 from './component/Page4';
+import Contents from './component/Contents';
 import Cms from './admin/Cms';
 import Cmss from './admin/Cmss';
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/page4" element={<Page4 />} />
           <Route path="/cmss" element={<Cmss />} />
           <Route path="/cms" element={<Cms />} />
+          <Route path="/contents" element={<Contents />} />
         </Routes>
         <Footer />
       </div>

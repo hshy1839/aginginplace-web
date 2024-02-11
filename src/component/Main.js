@@ -14,7 +14,6 @@ const Main = () => {
             <Section image="/images/cat4.jpg" to="/page4" buttonText="커뮤니티 및 건강상담실" />
         </div>
     </div>
-
     
   );
 };

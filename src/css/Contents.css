@@ -1,0 +1,37 @@
+/* Contents.css */
+
+.content-box {
+    display: flex;
+    flex-wrap: wrap; /* 요소들을 여러 행으로 나눔 */
+  }
+  
+  .video-description-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+    margin-top: 50px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-left: 20px;
+  }
+  
+  
+  .video-box {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .description-box {
+    margin-left: 20px;
+    margin-top: -10px;
+  }
+  .description-box a {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 735px) {
+    .description-box p {
+      display: none;
+    }
+  }
