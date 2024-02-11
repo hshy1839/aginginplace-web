@@ -14,7 +14,7 @@ const Header = () => {
         <ul>
           <li><Link to="/page1">복약 알림 및 설정</Link></li>
           <li><Link to="/page2">실시간 생체정보 확인가능</Link></li>
-          <li><Link to="/page3">프로그램 콘텐츠 제공</Link></li>
+          <li><Link to="/contents">프로그램 콘텐츠 제공</Link></li>
           <li><Link to="/page4">커뮤니티 및 건강상담실</Link></li>
         </ul>
       </nav>
