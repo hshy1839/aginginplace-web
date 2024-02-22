@@ -2,15 +2,8 @@ import React, { useState } from 'react';
 import '../css/MyPage.css';
 import ChangePassword from './ChangePassword';
 import MyInfo from './MyInfo';
+import EditProfile from './EditProfile';
 
-function EditProfile() {
-    return (
-        <div className='editprofile-container'>
-            <h2>개인정보 수정 페이지</h2>
-            <h4>테스트용 개인정보 수정</h4>
-        </div>
-    );
-}
 
 function Withdraw() {
     return (

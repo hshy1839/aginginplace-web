@@ -1,5 +1,7 @@
 body {
     background-color: whitesmoke;
+    width: 1600px;
+    height: 1000px;
 }
 .sidebar {
     position: relative;
@@ -31,6 +33,7 @@ body {
   }
 
   .sidebar ul li {
+    color: rgb(253, 253, 253);
     margin-top: 40px;
     cursor: pointer;
   }
