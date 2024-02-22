@@ -1,8 +1,7 @@
-/* Contents.css */
 
 .content-box {
     display: flex;
-    flex-wrap: wrap; /* 요소들을 여러 행으로 나눔 */
+    flex-wrap: wrap; 
   }
   
   .video-description-wrapper {
