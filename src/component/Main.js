@@ -6,7 +6,7 @@ import '../css/Main.css';
 const Main = () => {
   return (
     <div>
-        <img src="/images/cat3.jpg" alt='img'style={{ width: '100%', height: '700px' }}/>
+        <img src="/images/cat3.jpg" alt='img'style={{ width: '50%', height: '700px' }}/>
         <div className="main-container">
             <Section image="/images/cat1.jpg" to="/page1" buttonText="복욕 알림 및 설정" />
             <Section image="/images/cat2.jpg" to="/page2" buttonText="실시간 생체정보 확인 가능" />

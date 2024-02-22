@@ -3,22 +3,24 @@ body {
 }
 .section {
     position: relative;
-    text-align: center;
+    text-align: right;
     margin-bottom: 20px;
   }
   
   .section img {
-    width: 100%;
+    margin-right: 10px;
+    margin-top: 50px;
+    width: 50%;
     height: 700px;
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   
   .section button {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(187, 216, 59);
+    background-color: #1877F2;
     color: #fff;
     padding: 10px 20px; 
     font-size: 16px;

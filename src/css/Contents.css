@@ -1,3 +1,13 @@
+.content-container {
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column;
+  width: 1000px;
+}
 
 .content-box {
     display: flex;
@@ -27,6 +37,11 @@
   .description-box a {
     font-size: 30px;
     font-weight: bold;
+    color: black;
+  }
+
+  .description-box a:hover {
+    color: gray;
   }
   
   @media screen and (max-width: 735px) {
