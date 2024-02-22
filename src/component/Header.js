@@ -8,6 +8,7 @@ const Header = () => {
       <div className="logo">
         <Link to="/main">
           <img src="/images/logo192.png" alt="Your Logo" />
+        <span>DPS</span>
         </Link>
       </div>
       <nav className="nav-container">
