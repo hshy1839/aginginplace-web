@@ -1,57 +1,7 @@
 import React, { useState } from 'react';
 import '../css/MyPage.css';
-
-function MyInfo() {
-    const [name, setName] = useState('John Doe');
-    const [gender, setGender] = useState('남성');
-    const [category, setCategory] = useState('회원');
-    const [phoneNumber, setPhoneNumber] = useState('010-1234-5678');
-    const [email, setEmail] = useState('johndoe@example.com');
-
-    return (
-        <div className='myinfo-container'>
-            <div className='myinfo-title'>
-                <h2>내 정보 페이지</h2>
-            </div>
-            <div className='myinfo-context-container'>
-                <div>
-                    <strong>이름</strong>
-                    <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-                    <button>수정하기</button>
-                </div>
-                <div>
-                    <strong>성별</strong>
-                    <input type="text" value={gender} onChange={(e) => setGender(e.target.value)} />
-                    <button>수정하기</button>
-                </div>
-                <div>
-                    <strong>분류</strong>
-                    <input type="text" value={category} onChange={(e) => setCategory(e.target.value)} />
-                    <button>수정하기</button>
-                </div>
-                <div>
-                    <strong>전화번호</strong>
-                    <input type="text" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
-                    <button>수정하기</button>
-                </div>
-                <div>
-                    <strong>이메일</strong>
-                    <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
-                    <button>수정하기</button>
-                </div>
-            </div>
-        </div>
-    );
-}
-
-function ChangePassword() {
-    return (
-        <div className='password-container'>
-            <h2>비밀번호 변경 페이지</h2>
-            <h4>테스트용 비번 변경</h4>
-        </div>
-    );
-}
+import ChangePassword from './ChangePassword';
+import MyInfo from './MyInfo';
 
 function EditProfile() {
     return (

@@ -67,38 +67,3 @@ body {
     margin-top: 30px;
     border-bottom: 1px solid whitesmoke;
   }
-
-  .myinfo-container {
-    margin-top: -140px;
-    background-color: white;
-    width: 750%;
-    height: 820px;
-    max-width: 1200px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  @media only screen and (max-width: 935px) {
-    .myinfo-container {
-        width: 150%; 
-    }
-}
-@media only screen and (max-width: 1235px) {
-    .myinfo-container {
-        width: 200%; 
-    }
-}
-.myinfo-title h2 {
-    text-align: left;
-    margin-left: 40px;
-    margin-top: 40px;
-    font-weight: bolder;
-}
-.myinfo-context-container div {
-    text-align: left;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    margin-left: 50px;
-}
-.myinfo-context-container button {
-    width: 120px;
-    height: 40px;
-}
