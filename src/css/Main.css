@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .main-container {
   text-align: center; 
   margin-top: 2%; 
@@ -56,6 +57,38 @@
   background-color: rgb(240, 239, 239);
   color: rgb(0, 0, 0);
   margin: 0 auto; 
+=======
+body {
+  background-color: whitesmoke;
+}
+.section {
+    position: relative;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  
+  .section img {
+    margin-right: 10px;
+    margin-top: 50px;
+    width: 50%;
+    height: 700px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .section button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #1877F2;
+    color: #fff;
+    padding: 10px 20px; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 60px;
+    cursor: pointer;
+  }
+>>>>>>> a3bd1bdcdeca36b63643270293839d933d6338a2
   
 }
 
