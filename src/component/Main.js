@@ -39,7 +39,7 @@ const Main = () => {
               onClick={() => handleSectionClick('prevention')}
               className={selectedSection === 'prevention' ? 'active' : ''}
             >
-              치매 예방법1
+              치매 예방법
             </button>
           </div>
 =======
