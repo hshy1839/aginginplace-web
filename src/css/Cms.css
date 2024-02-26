@@ -1,29 +1,59 @@
 .cms-container {
-    display: flex;
-  }
+  display: flex;
+}
+
+.sidebar {
+  width: 180px;
+  height: 100vh;
+  background-color: #2fb1ad;
+  padding: 20px;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+div {
+  margin-left: 0; 
+  margin-right: auto; 
+}
+
+th {
+  font-size: 16px;
+  white-space: nowrap;
+  padding-bottom: 15px;
+  padding-right: 2px; 
+  border-right: 1px solid #ccc;
+  text-align: center; 
+}
+
+th:last-child {
+  border-right: none;
+}
+
+.pagination {
+  margin-top: 30px;
+  text-align: center; 
   
-  .sidebar {
-    width: 250px;
-    height: 100vh;
-    background-color: #f0f0f0;
-    padding: 20px;
-  }
-  
-  .sidebar h2 {
-    margin-bottom: 10px;
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar li {
-    margin-bottom: 10px;
-  }
-  
-  .content {
-    flex: 1;
-    padding: 20px;
-  }
+}
+.pagination button{
+  background-color: #2fb1ad;
+}
+.table-td {
+  font-size: 16px;
+  padding: 10px;
+  white-space: nowrap;
+  height: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
   

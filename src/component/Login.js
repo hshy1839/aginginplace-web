@@ -24,54 +24,28 @@ const Login = () => {
             <div className="login-box col-lg-2">
               <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                  <input
-                    type="text"
-                    id="username"
-                    title="아이디"
-                    name="username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    className="form-control flush"
-                    placeholder="아이디"
-                  />
+                  <input type="text" id="username" title="아이디" name="username" value={username} onChange={(e) => setUsername(e.target.value)} className="form-control flush" placeholder="아이디" />
                 </div>
                 <div className="form-group">
-                  <input
-                    type="password"
-                    id="password"
-                    title="비밀번호"
-                    name="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    className="form-control flush"
-                    placeholder="비밀번호"
-                  />
+                  <input type="password" id="password" title="비밀번호" name="password" value={password} onChange={(e) => setPassword(e.target.value)} className="form-control flush" placeholder="비밀번호" />
                 </div>
-
                 <div className="form-group">
-                  <input
-                    type="checkbox"
-                    name="saveId"
-                    id="saveId"
-                    className="sr-only"
-                    checked={saveId}
-                    onChange={() => setSaveId(!saveId)}
-                  />
+                  <input type="checkbox" name="saveId" id="saveId" className="sr-only" checked={saveId} onChange={() => setSaveId(!saveId)} />
                   <label htmlFor="saveId" className="custom-label custom-label-sm">
                     <span className="check-primary">
                       <i className="xi-check"></i>
+                      아이디 저장
                     </span>
-                    아이디 저장
                   </label>
                 </div>
                 <div className="find-group">
                   <Link to="/signup" className="text-primary">
                     회원가입 | 
                   </Link>
-                  <Link to="/find_id" className="findPd">
+                  <Link to="/Idppl" className="findPd">
                      아이디 찾기 |
                   </Link>
-                  <Link to="/find_pw" className="findPd">
+                  <Link to="/Passwordppl" className="findPd">
                     비밀번호 찾기
                   </Link>
                 </div>

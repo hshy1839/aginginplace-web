@@ -40,9 +40,8 @@ const Section1 = ({ handleNext }) => {
         <div className="terms-scroll">
           <div className='pscheck-box1'>
             <label>
-              <input type="checkbox" checked={agreement1} onChange={() => handleIndividualCheck(1)} />
-              <span className='pschecks'>(필수)</span> 이용약관
-            </label>
+              <input type="checkbox" checked={agreement1} onChange={handleCheckAll} />
+              <span className='pschecks'>(필수)</span> 개인정보 수집 및 이용 동의 </label>
           </div>
           <div>
             <textarea rows="15" cols="65" placeholder="약관 내용asdadsadadadadasdadsadadadadasdadsadadadad
@@ -51,26 +50,8 @@ const Section1 = ({ handleNext }) => {
             asdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadad
             asdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadad" readOnly></textarea>
           </div>
-          <div className='pscheck-box2'>
-            <label>
-              <input type="checkbox" checked={agreement2} onChange={() => handleIndividualCheck(2)} />
-              <span className='pschecks'>(필수)</span> 이용약관
-            </label>
-          </div>
-          <div>
-            <textarea rows="15" cols="65" placeholder="약관 내용asdadsadadadadasdadsadadadadasdadsadadadadsaddsadadasasddsadadasdasddsa
-            asdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadadsadasdsadadd
-            asdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadad
-            asdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadad
-            asdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadadasdadsadadadad" readOnly></textarea>
-          </div>
         </div>
-        <div className='Allcheckdss'>
-          <label>
-            <input type="checkbox" checked={allAgreed} onChange={handleCheckAll} />
-            모든 약관을 확인하고 전체 동의합니다.
-          </label>
-        </div>
+
         <div>
          <button className='nextBtt' onClick={handleNextButton}>다음</button>
         </div>

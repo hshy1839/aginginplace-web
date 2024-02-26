@@ -1,10 +1,79 @@
 .footer-container {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    background-color: #f8f8f8;
-    padding: 30px;
-    text-align: left;
-    margin-top: auto;
-  }
+  position: relative;
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 30px;
+  text-align: left;
+  margin-top: 1%;
+
+}
+
+.footer-container div {
+  margin-bottom: 27px;
   
+}
+.abcds{
+  margin-left: 21%;
+}
+.babago{
+  margin-right: 24.5%;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(244, 124, 124);
+}
+.upper-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.upper-section p {
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.upper-section::before {
+  content: '';
+  position: absolute;
+  top: 25%; 
+  left: 0;
+  width: 53.3%; 
+  height: 0.3px; 
+  background-color: #939090;
+  z-index: 1;
+  transform: translateY(-50%); 
+  margin-left: 21.7%;
+}
+
+.lower-section {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 12px;
+  
+}
+
+.footit{
+ 
+  font-size: 16px;
+  color: #000000;
+}
+.fooati{
+  font-size: 19px;
+  font-weight: bold;
+  color: rgb(98, 98, 98);
+}
+@media only screen and (max-width: 768px) {
+  .footer-container {
+    padding: 20px;
+  }
+
+  .upper-section::before {
+    width: 80%;
+  }
+}
+.fontwhwjd{
+  font-size: 13px;
+  color: #636161;
+}

@@ -5,10 +5,12 @@ import Login from './component/Login';
 import Signup from './component/Signup';
 import Footer from './component/Footer';
 import Main from './component/Main';
-import Page1 from './component/Page1';
+import Idppl from './component/Idppl';
+import Passwordppl from './component/Passwordppl';
 import Page2 from './component/Page2';
 import Page3 from './component/Page3';
 import Page4 from './component/Page4';
+import Page5 from './component/Page5';
 import Cms from './admin/Cms';
 import Cmss from './admin/Cmss';
 
@@ -21,10 +23,12 @@ function App() {
           <Route path="/main" element={<Main />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/page1" element={<Page1 />} />
+          <Route path="/Idppl" element={<Idppl />} />
+          <Route path="/Passwordppl" element={<Passwordppl />} />
           <Route path="/page2" element={<Page2 />} />
           <Route path="/page3" element={<Page3 />} />
           <Route path="/page4" element={<Page4 />} />
+          <Route path="/Page5" element={<Page5 />} />
           <Route path="/cmss" element={<Cmss />} />
           <Route path="/cms" element={<Cms />} />
         </Routes>

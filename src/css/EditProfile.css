@@ -1,0 +1,86 @@
+.editprofile-container {
+    margin-top: -100px;
+    background-color: white;
+    width: 1200px;
+    height: 730px;
+    max-width: 1200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+}
+
+.editprofile-title strong {
+    font-size: 38px;
+    font-weight: bolder;
+    display: block;
+    text-align: center; 
+}
+
+.editprofile-context-container {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.editprofile-context-container div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+.editprofile-context-container div label {
+    width: 200px;
+    margin-right: 20px;
+}
+
+.editprofile-context-container div select, 
+.editprofile-context-container div input {
+    flex: 1;
+    height: 30px;
+    border-radius: 7px;
+    border-color: transparent;
+    background-color: rgba(170, 170, 170, 0.2);
+    color: black;
+}
+
+.editprofile-context-container button {
+    width: 350px;
+    text-align: center;
+    font-size: small;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.editprofile-context-container button:active {
+    background-color: skyblue;
+}
+
+.editprofile-context-container button:hover {
+    transition: opacity 0.5s ease;
+    opacity: 0.7;
+}
+
+@media only screen and (max-width: 1100px) {
+    .editprofile-container {
+        width: 130%;
+    }
+
+    .editprofile-context-container div label {
+        width: 40%;
+        margin-right: 5%;
+    }
+
+    .editprofile-context-container div select, 
+    .editprofile-context-container div input {
+        width: 55%;
+    }
+}

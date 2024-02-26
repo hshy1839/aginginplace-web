@@ -1,0 +1,170 @@
+.qna-page {
+  display: flex;
+}
+.qna-nav-ALL{
+  padding: 15px 20px;
+
+  font-weight: bold;
+  font-size: 22px;
+  background-color: #f0f0f0;
+  color: rgb(0, 0, 0);
+}
+.aaaaaa {
+  color: #0f1813; 
+  margin-bottom: 50px; 
+  font-weight: bold;
+  font-size: 40px;
+}
+.qna-nav-item{
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+.qna-nav-item-Q{
+  padding: 15px 20px;
+  margin-right: 0px;
+  background-color: #00487c; 
+  color: #fff; 
+  border-radius: 10px;
+  
+}
+.qna-nav-item-S,
+.qna-nav-item-A{
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 0px;
+  border-radius: 0 20em 20em 0;
+  
+}
+.qna-nav-item:hover {
+  background-color: #00487c; 
+  color: #fff; 
+}
+
+
+.qna-navigation {
+
+  position: fixed;
+  top: 230px;
+  left: 230px;
+  width: 188px; 
+  background-color: #f0f0f0;
+}
+.bottom{
+  padding-bottom: 40px;
+}
+
+
+.qna-header {
+  margin-left: 130px; 
+  text-align: center;
+}
+
+.qna-content {
+  
+  margin: 120px auto 10px; 
+  width: 50%;
+  margin-left: 580px;
+}
+.qna-options{
+  margin-top: 100px;
+}
+
+.qna-button{
+  background: #71bdf3;
+  padding: 6px 15px;
+  font-size: 18px;
+  border-radius: 7px;
+}
+
+.qna-write-button{
+  margin-top: 20px;
+  margin-left: 850px;
+  padding: 5px 20px;
+  font-size: 18px;
+  border-radius: 7px;
+  background: #71bdf3;
+}
+
+
+.qna-select,
+.qna-search,
+.qna-button{
+  margin-right: 10px;
+}
+
+.qna-options .qna-select {
+  font-size: 16px; 
+  padding: 10px; 
+  margin-right: 10px; 
+  border-radius: 10px;
+}
+
+.qna-options .qna-search {
+  font-size: 16px;
+  padding: 10px;
+  width: 450px; 
+  border-radius: 4px;
+}
+
+.qna-content th {
+  font-weight: bold; 
+  font-size: 1px; 
+}
+
+.qna-content td {
+  font-size: 20px; 
+  
+}
+
+
+.qna-content table {
+  width: 100%;
+  border-collapse: collapse; 
+}
+
+.qna-content th,
+.qna-content td {
+  padding: 1px; 
+  text-align: center; 
+  border: none; 
+}
+
+.qna-content th {
+  background-color: #ffffff; 
+}
+
+
+.qna-content td {
+  border-top: 1px solid #ddd; 
+}
+
+.qna-content tr:last-child td {
+  border-bottom: 2px solid #ddd; 
+}
+
+.qna-content th{
+  border-top: 3px solid #000000; 
+  font-size: 24px;
+  padding: 20px;
+}
+
+.pagebtt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagebtt button {
+  margin: 10px 5px;
+  padding: 5px 15px;
+  background-color: #71bdf3;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  cursor: pointer;
+  
+}
+
+.pagebtt button:hover {
+  background-color: #686666;
+}
