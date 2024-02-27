@@ -14,6 +14,7 @@ import Page5 from './component/Page5';
 import Cms from './admin/Cms';
 import Cmss from './admin/Cmss';
 import MyPage from './component/MyPage';
+import Contents from './component/Contents';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
         <Routes>
           <Route path="/main" element={<Main />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/signup" element={<Signup />} /> 
           <Route path="/Idppl" element={<Idppl />} />
           <Route path="/Passwordppl" element={<Passwordppl />} />
           <Route path="/page2" element={<Page2 />} />

@@ -90,7 +90,3 @@ const ContentPage = () => {
 };
 
 export default ContentPage;
-<<<<<<< HEAD
-
-=======
->>>>>>> a3bd1bdcdeca36b63643270293839d933d6338a2

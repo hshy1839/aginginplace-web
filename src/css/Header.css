@@ -20,14 +20,8 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-<<<<<<< HEAD
   padding: 8px 30px; 
   background-color: rgb(255, 255, 255);
-=======
-  padding: 1px 20px; /* 수정된 부분: 20x가 아니라 20px로 수정 */
-  background-color:#1877F2;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
->>>>>>> a3bd1bdcdeca36b63643270293839d933d6338a2
   width: 100%;
   height: 80px;
   box-sizing: border-box;
@@ -57,18 +51,7 @@ nav li {
   font-size: 15px;
 }
 .logo {
-<<<<<<< HEAD
     margin-left: 12%;
-=======
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center;
-}
-.logo span{
-  color: white;
-  font-size: 20px;
->>>>>>> a3bd1bdcdeca36b63643270293839d933d6338a2
 }
 
 .logo img {
@@ -107,16 +90,10 @@ nav li {
 
 
 .auth-buttons button {
-<<<<<<< HEAD
   background-color: #ffffff;
   border-radius: 15px;
   font-size: 13px;
   border: 1px solid #d1d1d1;
-=======
-  background-color: transparent;
-  border-radius: 20px;
-  font-size: 12px;
->>>>>>> a3bd1bdcdeca36b63643270293839d933d6338a2
 }
 
 .dropdown-overlay {
@@ -138,7 +115,6 @@ nav li {
   
 }
 
-<<<<<<< HEAD
 .qna-navigation {
   display: flex; 
   flex-direction: column; 
@@ -160,13 +136,3 @@ nav li {
 
 
 
-=======
-a {
-  color: white;
-  font-size: 16px;
-}
-
-a:hover {
-  color:lightgray;
-}
->>>>>>> a3bd1bdcdeca36b63643270293839d933d6338a2
