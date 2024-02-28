@@ -35,8 +35,8 @@ function App() {
           <Route path="/cms" element={<Cms />} />
           <Route path="/contents" element={<> <Header /><Contents /> </>} />
           <Route path="/mypages" element={<MyPage />} />
+          <Footer />
         </Routes>
-        <Footer />
       </div>
     </BrowserRouter>
   );
