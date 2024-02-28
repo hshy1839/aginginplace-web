@@ -21,22 +21,20 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/main" element={<Main />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} /> 
-          <Route path="/Idppl" element={<Idppl />} />
-          <Route path="/Passwordppl" element={<Passwordppl />} />
-          <Route path="/page2" element={<Page2 />} />
-          <Route path="/page3" element={<Page3 />} />
-          <Route path="/page4" element={<Page4 />} />
-          <Route path="/Page5" element={<Page5 />} />
-          <Route path="/cmss" element={<Cmss />} />
-          <Route path="/cms" element={<Cms />} />
-          <Route path="/contents" element={<> <Header /><Contents /> </>} />
-          <Route path="/mypages" element={<MyPage />} />
+          <Route path="/" element={<><Main /><Footer /></>} />
+          <Route path="/login" element={<><Login /><Footer /></>} />
+          <Route path="/signup" element={<><Signup /><Footer /></>} /> 
+          <Route path="/Idppl" element={<><Idppl /><Footer /></>} />
+          <Route path="/Passwordppl" element={<><Passwordppl /><Footer /></>} />
+          <Route path="/page2" element={<><Page2 /><Footer /></>} />
+          <Route path="/page3" element={<><Page3 /><Footer /></>} />
+          <Route path="/page4" element={<><Page4 /><Footer /></>} />
+          <Route path="/Page5" element={<><Page5 /><Footer /></>} />
+          <Route path="/cmss" element={<><Cmss /><Footer /></>} />
+          <Route path="/cms" element={<><Cms /><Footer /></>} />
+          <Route path="/contents" element={<> <Header /><Contents /><Footer /> </>} />
+          <Route path="/mypages" element={<><MyPage /><Footer /></>} />
         </Routes>
-        <Footer />
       </div>
     </BrowserRouter>
   );
