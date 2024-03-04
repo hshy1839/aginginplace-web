@@ -19,12 +19,13 @@ import Cmsuser from './admin/Cmsuser';
 import Cmsfaq from './admin/Cmsfaq'
 import MyPage from './component/MyPage';
 
+
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Routes>
-          <Route path="/main" element={<><Header /><Main /><Footer /></>}  />
+          <Route path="/" element={<><Header /><Main /><Footer /></>}  />
           <Route path="/login" element={<><Header /><Login /><Footer /></>}  />
           <Route path="/signup" element={<><Header /><Signup /><Footer /></>}  />
           <Route path="/Idppl" element={<><Header /><Idppl /><Footer /></>}  />
