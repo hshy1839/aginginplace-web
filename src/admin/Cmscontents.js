@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import '../css/Cms.css';
-import Useradd from './Useradd';
+import '../css/Cmscontents.css';
 
 const Cmss = () => {
   const [posts, setPosts] = useState([
-    { id: 1, type: '공지사항',title: '공지사항제목1', author: '관리자', date: '2024-01-01',description:'공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 ' },
-    { id: 2, type: '공지사항',title: '공지사항제목2', author: '매니저', date: '2024-01-21' },
-    { id: 3, type: '공지사항',title: '공지사항제목3', author: '관리자', date: '2024-01-11' },
+    { id: 1, type: '콘텐츠',title: '우울', author: '관리자', date: '2024-01-01',description:'우울에대한 설명 콘텐츠 설명 우울에대한 설명 콘텐츠 설명 우울에대한 설명 콘텐츠 설명 우울에대한 설명 콘텐츠 설명 우울에대한 설명 콘텐츠 설명 우울에대한 설명 콘텐츠 설명 우울에대한 설명 콘텐츠 설명  ' },
+    { id: 2, type: '콘텐츠2',title: '수면장애', author: '매니저', date: '2024-01-21' },
+    { id: 3, type: '콘텐츠3',title: '심장질환', author: '관리자', date: '2024-01-11' },
 
 
 
@@ -41,10 +41,7 @@ const Cmss = () => {
       <div className="cms-container">
 
       <div className="Cmss-header">
-        <div className='Cmss-chch'>
-          <Link to="/Cmss"><button className='chchbtt1'>공지사항 게시판</button></Link>
-          <Link to="/Cmsfaq"><button className='chchbtt'>FAQ 게시판</button></Link>
-        </div>
+        <h2>프로그램 콘텐츠 관리</h2>
 
         <div className="Cmss-options">
           
@@ -84,7 +81,13 @@ const Cmss = () => {
                     <tr className='sang-trtag'>
                       <td colSpan="5">
                         <div className="selected-post">
-                          <p className='sang-title'>{post.title}</p>
+                          <div className='cms-confile'>
+                             <p className='sang-contents'>{post.title}</p>  
+                             <p className='sang-contents1'>이미지</p>
+                             <p className='sang-contents2'>첨부내용</p>
+                             <button className='sang-contents3'>첨부파일</button>
+                          </div>
+                          
                           <p className='sang-description'>{post.description}</p>
                           <div className='sang-bttcon'>
                             <button className='sang-btt'>게시글 수정</button>
