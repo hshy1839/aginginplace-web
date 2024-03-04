@@ -2,16 +2,23 @@
   display: flex;
   flex-direction: column;
 }
-
 .sidebar {
-  width: 180px;
-  height: 100vh;
-  background-color: #2fb1ad;
-  padding: 20px;
+  position: relative;
+  float: left;
+  background-color: #1877F2;
+  margin-top: -120px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  opacity: 0.9;
+  height: 2000px;
 }
 
-.sidebar li {
-  margin-bottom: 15px;
+.sidebar-title h2 {
+  color: white;
+  font-size: xx-large;
+  text-align: left; 
+  margin-top: 50px;
+  user-select: none;
+  margin-bottom: 70px;
 }
 
 div {
@@ -50,7 +57,7 @@ th:last-child {
 .Cmss-content{
   margin: 2.5% auto 10px; 
   width: 80%;
-  margin-left: 55%;
+  margin-left: 35%;
 }
 
 .Cmss-content th {
@@ -106,7 +113,7 @@ th:last-child {
   justify-content: center;
   align-items: center;
   margin-top: 25px;
-  margin-right: 83%;
+  margin-right: 50%;
 }
 
 .Cmss-pagebtt button {
@@ -144,7 +151,7 @@ th:last-child {
   width: 100%;
   height: 100%;
   margin-top: 3%;
-  margin-left: 28%;
+  margin-left: 35%;
 }
 .Cmss-header {
   margin-left: 30%; 

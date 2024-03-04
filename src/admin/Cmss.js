@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import '../css/Cms.css';
-import Useradd from './Useradd';
 
 const Cmss = () => {
   const [posts, setPosts] = useState([
