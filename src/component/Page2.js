@@ -77,8 +77,11 @@ const QnAPage = () => {
           postsPerPage={postsPerPage}
           totalPosts={posts.length}
           paginate={paginate}
+          
         />
+
       </div>
+      
     </div>
   );
 };
@@ -99,6 +102,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
           </button>
         ))}
       </div>
+      
     </div>
   );
 };

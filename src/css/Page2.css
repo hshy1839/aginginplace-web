@@ -1,8 +1,9 @@
+
 .qna-page {
   display: flex;
 }
 .qna-nav-ALL{
-  padding: 15px 20px;
+  padding: 30px 20px;
 
   font-weight: bold;
   font-size: 22px;
@@ -168,4 +169,42 @@
 
 .pagebtt button:hover {
   background-color: #686666;
+}
+/* 뷰포트 너비에 따라 네비게이션과 컨텐츠의 위치 조정 */
+@media only screen and (max-width: 768px) {
+  .qna-navigation {
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .qna-header {
+    margin-left: 0;
+  }
+
+  .qna-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+}
+
+/* 화면 너비가 좁아질 때 테이블의 폰트 사이즈 줄이기 */
+@media only screen and (max-width: 600px) {
+  .qna-content th,
+  .qna-content td {
+    font-size: 16px;
+  }
+}
+
+/* 화면 너비가 좁아질 때 네비게이션 아이템들을 더 작은 크기로 만들기 */
+@media only screen and (max-width: 500px) {
+  .qna-nav-item,
+  .qna-nav-item-Q,
+  .qna-nav-item-S,
+  .qna-nav-item-A {
+    padding: 10px;
+    font-size: 14px;
+  }
 }

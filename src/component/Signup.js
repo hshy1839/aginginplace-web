@@ -41,7 +41,7 @@ const Signup = () => {
           return;
         }
         try {
-          const response = await axios.post('/api/signup', userData); // 서버에 회원가입 데이터 전송
+          const response = await axios.post('/api/signup', userData); // 서버에 POST 요청
           console.log('User signed up successfully:', response.data);
         } catch (error) {
           console.error('Error signing up:', error.response.data.error);

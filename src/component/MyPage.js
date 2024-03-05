@@ -51,6 +51,7 @@ function MyPage() {
                 {selectedSection === 'editprofile' && <EditProfile />}
                 {selectedSection === 'withdraw' && <Withdraw />}
             </div>
+            
         </div>
     );
 }

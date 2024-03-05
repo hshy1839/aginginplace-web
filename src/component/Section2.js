@@ -15,9 +15,6 @@ const Section2 = ({ userData, handleInputChange, handleNext }) => {
       userData.username !== '' &&
       userData.password !== '' &&
       userData.confirmPassword !== '' &&
-      emailId !== '' &&
-      emailDomain !== '' &&
-      (emailDomain !== '직접입력' || customDomain !== '') &&
       userData.name !== '' &&
       userData.birthdate !== '' &&
       userData.telecom !== '' &&
@@ -27,6 +24,8 @@ const Section2 = ({ userData, handleInputChange, handleNext }) => {
 
   const handleNextClick = () => {
     if (isFormComplete()) {
+      const email = showCustomDomain ? `${emailId}@${customDomain}` : `${emailId}@${emailDomain}`;
+      handleInputChange({ target: { name: 'email', value: email } });
       handleNext(); 
     } else {
       alert('모든 내용을 입력해주세요.');
@@ -36,22 +35,17 @@ const Section2 = ({ userData, handleInputChange, handleNext }) => {
   const handleEmailIdChange = (e) => {
     const { value } = e.target;
     setEmailId(value);
-    handleInputChange({ target: { name: 'email', value: `${value}@${emailDomain}` } });
   };
 
   const handleEmailDomainChange = (e) => {
     const { value } = e.target;
     setEmailDomain(value);
-    if (value === '직접입력') {
-      setShowCustomDomain(true);
-    }
-    handleInputChange({ target: { name: 'email', value: `${emailId}@${value}` } });
+    setShowCustomDomain(value === '직접입력');
   };
 
   const handleCustomDomainChange = (e) => {
     const { value } = e.target;
     setCustomDomain(value);
-    handleInputChange({ target: { name: 'customDomain', value } });
   };
 
   const handleGenderChange = (e) => {
