@@ -1,32 +1,34 @@
 .footer-container {
   position: absolute;
-  width: 100%;
+  width: 95%;
   background-color: #f8f8f8;
   padding: 30px;
   text-align: left;
   margin-top: 1%;
-
+  
 }
 
 .footer-container div {
   margin-bottom: 27px;
-  
 }
-.abcds{
-  margin-left: 21%;
+
+.abcds {
+  margin-left: 21%; 
+  margin-right: 10%; 
 }
-.babago{
-  margin-right: 24.5%;
+
+.babago {
+  margin-right: 25%;
   font-size: 20px;
   font-weight: bold;
   color: rgb(244, 124, 124);
 }
+
 .upper-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 
 .upper-section p {
   margin-right: 10px;
@@ -37,13 +39,13 @@
 .upper-section::before {
   content: '';
   position: absolute;
-  top: 25%; 
+  top: 25%;
   left: 0;
-  width: 53.3%; 
-  height: 0.3px; 
+  width: 53.3%;
+  height: 0.3px;
   background-color: #939090;
   z-index: 1;
-  transform: translateY(-50%); 
+  transform: translateY(-50%);
   margin-left: 21.7%;
 }
 
@@ -51,40 +53,54 @@
   margin-top: 30px;
   text-align: center;
   font-size: 12px;
-  
+  display: flex; 
+  justify-content: space-around; 
 }
 
-.footit{
- 
+.footit {
   font-size: 16px;
   color: #000000;
 }
-.fooati{
+
+.fooati {
   font-size: 19px;
   font-weight: bold;
   color: rgb(98, 98, 98);
 }
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 480px) {
   .footer-container {
-    padding: 20px;
+    padding: 15px;
   }
 
   .upper-section::before {
-    width: 80%;
+    width: 90%;
+  }
+
+  .abcds {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .babago {
+    margin-right: 10%;
+    font-size: 16px;
+  }
+
+  .footit {
+    font-size: 14px;
+  }
+
+  .fooati {
+    font-size: 16px;
+  }
+
+  .fontwhwjd {
+    font-size: 11px;
   }
 }
-.fontwhwjd{
+
+.fontwhwjd {
   font-size: 13px;
   color: #636161;
 }
-
-/* .footer-container {
-    position: absolute;
-    bottom: -60px;
-    width: 100%;
-    background-color: #f8f8f8;
-    padding: 30px;
-    text-align: left;
-  }
-   */
-

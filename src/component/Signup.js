@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Section1 from './Section1';
 import Section2 from './Section2';
 import Section3 from './Section3';
+import axios from 'axios';
 
 const Signup = () => {
   const [section, setSection] = useState(1);
@@ -10,11 +11,9 @@ const Signup = () => {
   const [userData, setUserData] = useState({
     username: '',
     password: '',
-    confirmPassword: '',
     email: '',
     name: '',
     birthdate: '',
-    telecom: 'SKT',
     gender: 'male',
     nationality: 'domestic',
     phoneNumber: '',
@@ -32,7 +31,7 @@ const Signup = () => {
     setAgreed(true);
   };
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (section === 2 && !checkAllInputs()) {
       alert('모두 입력해주세요.');
     } else {
@@ -40,6 +39,12 @@ const Signup = () => {
         if (userData.password !== userData.confirmPassword) {
           setPasswordMatch(false);
           return;
+        }
+        try {
+          const response = await axios.post('/api/signup', userData); // 서버에 회원가입 데이터 전송
+          console.log('User signed up successfully:', response.data);
+        } catch (error) {
+          console.error('Error signing up:', error.response.data.error);
         }
       }
       setSection(section + 1);

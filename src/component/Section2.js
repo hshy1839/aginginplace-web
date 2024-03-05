@@ -17,10 +17,11 @@ const Section2 = ({ userData, handleInputChange, handleNext }) => {
       userData.confirmPassword !== '' &&
       emailId !== '' &&
       emailDomain !== '' &&
-      (emailDomain !== '직접입력' || customDomain !== '') && // 직접입력일 경우 customDomain도 확인
-      userData.userName !== '' &&
-      userData.birthDate !== '' &&
-      userData.telephoneNumber !== ''
+      (emailDomain !== '직접입력' || customDomain !== '') &&
+      userData.name !== '' &&
+      userData.birthdate !== '' &&
+      userData.telecom !== '' &&
+      userData.phoneNumber !== ''
     );
   };
 
@@ -74,20 +75,19 @@ const Section2 = ({ userData, handleInputChange, handleNext }) => {
         <p className='section2-title'>가입정보입력</p>
       </div>
       <div className='signup-id'>
-        <div className='input-container'>
+        <div className='Section2-container'>
           <div>
-            <input type='text' id='userid' name='username' value={userData.username} onChange={handleInputChange} placeholder='아이디' className='input-field' />
+            <input type='text' id='userid' name='username' value={userData.username} onChange={handleInputChange} placeholder='아이디' className='Section2-field' />
           </div>
           <div>
-            <input type='password' id='userpassword' name='password' value={userData.password} onChange={handleInputChange} placeholder='비밀번호' className='input-field' />
+            <input type='password' id='userpassword' name='password' value={userData.password} onChange={handleInputChange} placeholder='비밀번호' className='Section2-field' />
           </div>
           <div>
-            <input type='password' id='confirmPassword' name='confirmPassword' value={userData.confirmPassword} onChange={handleInputChange} placeholder='비밀번호 확인' className='input-field' />
+            <input type='password' id='confirmPassword' name='confirmPassword' value={userData.confirmPassword} onChange={handleInputChange} placeholder='비밀번호 확인' className='Section2-field' />
             {passwordMismatch && <p className='error-message'>비밀번호가 일치하지 않습니다.</p>}
           </div>
           <div className='email-container'>
-            <input type='text' id='emailId' name='emailId' value={emailId} onChange={handleEmailIdChange} placeholder='이메일' className='input-field input-email' />
-
+            <input type='text' id='emailId' name='emailId' value={emailId} onChange={handleEmailIdChange} placeholder='이메일' className='Section2-field input-email' />
             <span>@</span>
             {showCustomDomain ? (
               <>
@@ -95,54 +95,59 @@ const Section2 = ({ userData, handleInputChange, handleNext }) => {
                 <button onClick={() => setShowCustomDomain(false)}>확인</button>
               </>
             ) : (
-              <select id='emailDomain' value={emailDomain} onChange={handleEmailDomainChange} className='select-field'>
+              <select id='emailDomain' value={emailDomain} onChange={handleEmailDomainChange} className='select-field1'>
                 <option value=''>옵션 선택</option>
                 <option value='naver.com'>naver.com</option>
                 <option value='gmail.com'>gmail.com</option>
                 <option value='daum.com'>daum.com</option>
-                
               </select>
             )}
           </div>
-
-          <div>
-            <label>
-              <input type="radio" name="gender" value="male" checked={userData.gender === 'male'} onChange={handleInputChange} />
-              남자
-            </label>
-            <label>
-              <input type="radio" name="gender" value="female" checked={userData.gender === 'female'} onChange={handleInputChange} />
-              여자
-            </label>
+          <div className='genderradio-container'>
+            <div className='gender-radio'>
+              <label>
+                <input type="radio" name="gender" value="male" checked={gender === 'male'} onChange={handleGenderChange} />
+                남자
+              </label>
+            </div>
+            <div className='gender-radio'>
+              <label>
+                <input type="radio" name="gender" value="female" checked={gender === 'female'} onChange={handleGenderChange} />
+                여자
+              </label>
+            </div>
           </div>
-          <div>
-            <label>
-              <input type="radio" name="role" value="patient" checked={userData.role === 'patient'} onChange={handleInputChange} />
-              환자
-            </label>
-            <label>
-              <input type="radio" name="role" value="guardian" checked={userData.role === 'guardian'} onChange={handleInputChange} />
-              보호자
-            </label>
+          <div className='typeradio-container'>
+            <div className='type-radio'>
+              <label>
+                <input type="radio" name="role" value="patient" checked={role === 'patient'} onChange={handleRoleChange} />
+                환자
+              </label>
+            </div>
+            <div className='type-radio'>
+              <label>
+                <input type="radio" name="role" value="guardian" checked={role === 'guardian'} onChange={handleRoleChange} />
+                보호자
+              </label>
+            </div>
           </div>
         </div>
         <div>
-          <input type='text' id='name' name='name' value={userData.userName} onChange={handleInputChange} placeholder='이름' className='input-field'></input>
+          <input type='text' id='name' name='name' value={userData.name} onChange={handleInputChange} placeholder='이름' className='Section2-field'></input>
         </div>
         <div>
-          <input type='text' id='name' name='name' value={userData.userName} onChange={handleInputChange} placeholder='생년월일 8자' className='input-field'></input>
+          <input type='text' id='birthdate' name='birthdate' value={userData.birthdate} onChange={handleInputChange} placeholder='생년월일 8자' className='Section2-field'></input>
         </div>
         <div>
-          <input type='text' id='name' name='name' value={userData.userName} onChange={handleInputChange} placeholder='통신사 선택' className='input-field'></input>
+          <input type='text' id='telecom' name='telecom' value={userData.telecom} onChange={handleInputChange} placeholder='통신사 선택' className='Section2-field'></input>
         </div>
         <div>
-          <input type='text' id='name' name='name' value={userData.userName} onChange={handleInputChange} placeholder='휴대전화번호' className='input-field'></input>
+          <input type='text' id='phoneNumber' name='phoneNumber' value={userData.phoneNumber} onChange={handleInputChange} placeholder='휴대전화번호' className='Section2-field'></input>
         </div>
       </div>
       <button onClick={handleNextClick} className="next-button">
         다음
       </button>
-
     </div>
   );
 };

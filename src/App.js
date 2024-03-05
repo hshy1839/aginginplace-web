@@ -34,7 +34,7 @@ function App() {
           <Route path="/page3" element={<><Header /><Page3 /><Footer /></>}  />
           <Route path="/page4" element={<><Header /><Page4 /><Footer /></>}  />
           <Route path="/Page5" element={<><Header /><Page5 /><Footer /></>}  />
-          <Route path="/main" element={<> <Header /> <Main /> <Footer /></>} />
+          <Route path="/main" element={<> <Header /> <Main /> </>} />
           <Route path="/login" element={<> <Header /><Login /><Footer /> </>} />
           <Route path="/MyPage" element={<> <Header /><MyPage /><Footer /> </>} />
           <Route path="/signup" element={<> <Header /><Signup /><Footer /> </>} />
