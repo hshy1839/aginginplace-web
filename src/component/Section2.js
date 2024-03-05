@@ -133,9 +133,6 @@ const Section2 = ({ userData, handleInputChange, handleNext }) => {
           <input type='text' id='birthdate' name='birthdate' value={userData.birthdate} onChange={handleInputChange} placeholder='생년월일 8자' className='Section2-field'></input>
         </div>
         <div>
-          <input type='text' id='telecom' name='telecom' value={userData.telecom} onChange={handleInputChange} placeholder='통신사 선택' className='Section2-field'></input>
-        </div>
-        <div>
           <input type='text' id='phoneNumber' name='phoneNumber' value={userData.phoneNumber} onChange={handleInputChange} placeholder='휴대전화번호' className='Section2-field'></input>
         </div>
       </div>
