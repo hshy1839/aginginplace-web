@@ -19,7 +19,7 @@ const Login = () => {
       <div>
         <div className="login-layout">
           <h2 className='login-lg'>로그인</h2>
-
+          
           <div className="row">
             <div className="login-box col-lg-2">
               <form onSubmit={handleSubmit}>

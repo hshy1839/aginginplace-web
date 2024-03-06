@@ -17,7 +17,7 @@ const Section2 = ({ userData, handleInputChange, handleNext }) => {
       userData.confirmPassword !== '' &&
       userData.name !== '' &&
       userData.birthdate !== '' &&
-      userData.telecom !== '' &&
+      userData.role !== '' &&
       userData.phoneNumber !== ''
     );
   };

@@ -1,6 +1,7 @@
 
 .qna-page {
   display: flex;
+  
 }
 .qna-nav-ALL{
   padding: 30px 20px;
@@ -43,11 +44,12 @@
 
 
 .qna-navigation {
-
-  position: fixed;
-  top: 230px;
-  left: 230px;
-  width: 188px; 
+  flex-direction: column;
+  position: absolute;
+  display: flex;
+  margin: 15% 0 0  15%;
+  
+  width: 300px; 
   background-color: #f0f0f0;
 }
 .bottom{

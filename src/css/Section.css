@@ -41,6 +41,7 @@
   justify-content: center;
   text-align: center;
   height: 100vh;
+  margin-top: 8%;
 } 
 
 
@@ -48,6 +49,7 @@
   padding-bottom: 15px;
   font-size: 15px;
   font-weight: bold;
+  margin-top: 1%;
 }
 
 
@@ -70,3 +72,14 @@
 }
 
 
+@media only screen and (max-width: 768px) {
+  .section-container{
+    margin-top: 40%;
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  .section-container{
+    margin-top: 12%;
+  }
+}

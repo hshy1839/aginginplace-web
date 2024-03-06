@@ -1,6 +1,6 @@
 const express = require('express');
 const mysql = require('mysql');
-const bodyParser = require('body-parser');
+
 const path = require('path');
 const app = express();
 
@@ -29,11 +29,11 @@ connection.connect((err) => {
 });
 
 app.post('/api/signup', (req, res) => {
-  const { username, password, email, name, birthdate, gender, phoneNumber } = req.body;
+  const { username, password, email, name, birthdate, gender, phoneNumber,role} = req.body;
 
-  const query = `INSERT INTO members (username, password, email, name, birthdate, gender, phoneNumber) VALUES (?, ?, ?, ?, ?, ?, ?)`;
+  const query = `INSERT INTO members (username, password, email, name, birthdate, gender, phoneNumber,role) VALUES (?,?, ?, ?, ?, ?, ?, ?)`;
 
-  connection.query(query, [username, password, email, name, birthdate, gender,  phoneNumber], (err, result) => {
+  connection.query(query, [username, password, email, name, birthdate, gender,  phoneNumber,role], (err, result) => {
     if (err) {
       console.error('회원가입 실패: ' + err.stack);
       res.status(500).send('회원가입 실패');

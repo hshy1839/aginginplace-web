@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../css/Page2.css';
 
 const QnAPage = () => {
-  const [posts, setPosts] = useState([
+  const [posts] = useState([
     { id: 1, title: '질문 있습니다.', author: '강석현', date: '2024-01-01' },
     { id: 2, title: '질문 있습니다.', author: '오징어', date: '2024-01-01' },
     { id: 3, title: '질문 있습니다.', author: '강석현', date: '2024-01-01' },
@@ -29,10 +29,10 @@ const QnAPage = () => {
     <div>
       <div className="qna-page">
         <nav className="qna-navigation">
-          <sapn className="qna-nav-ALL">전체</sapn>
-          <Link to="/Page2" className="qna-nav-item-Q">QnA게시판</Link>
-          <Link to="/Page4" className="qna-nav-item">공지사항</Link>
-          <Link to="/Page5" className="qna-nav-item">자주묻는질문</Link>
+          <span className="qna-nav-ALL">전체</span>
+            <Link to="/Page2" className="qna-nav-item-Q">QnA게시판</Link>
+            <Link to="/Page4" className="qna-nav-item">공지사항</Link>
+            <Link to="/Page5" className="qna-nav-item">자주묻는질문</Link>
         </nav>
       </div>
 
