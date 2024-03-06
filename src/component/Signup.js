@@ -16,7 +16,6 @@ const Signup = () => {
     birthdate: '',
     gender: 'male',
     nationality: 'domestic',
-    role: 'patient',
     phoneNumber: '',
   });
 

@@ -1,15 +1,16 @@
-body {
-    background-color: whitesmoke;
-    width: 100%;
-    height: 100%;
+
+.mypage {
+  margin-top: 250px;
 }
 .sidebar {
-    position: relative;
+    position: absolute;
     float: left;
     background-color: #1877F2;
-    margin-top: -120px;
+    height: 100vh !important;
+    width: 250px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
     opacity: 0.9;
+
   }
   
   .sidebar-title h2 {
@@ -19,11 +20,18 @@ body {
     margin-top: 50px;
     user-select: none;
     margin-bottom: 70px;
+    margin-left: 20px;
+  }
+  .sidebar-menu li span{
+    margin-left: 20px;
   }
   
   .content {
-    margin-left: 20px;
-    float: left;
+    position: relative;
+    margin-left: 15%;
+    float: center;
+    margin-top: -50px;
+    padding: 10px 50px;
   }
   
   .sidebar ul {
@@ -50,23 +58,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: -30px;
+    margin-left: -40px;
+    margin-top: 30px;
   }
 
   .logo-container span {
     color: white;
-    font-size: 40px;
+    font-size: 20px;
     cursor: pointer;
   }
   
   .logo-container img {
     cursor: pointer;
     margin-right: 10px;
-    width: 40px;
-    height: 40px;  
+    width: 30px;
+    height: 30px;  
   }
 
   .logo-bottombar p {
     margin-top: 30px;
     border-bottom: 1px solid whitesmoke;
+    opacity: 0.3;
   }

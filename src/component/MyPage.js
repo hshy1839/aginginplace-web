@@ -22,7 +22,7 @@ function MyPage() {
             <div className="sidebar">
                 <div className="logo-container">
                     <img src="/images/logo-small.png" alt="로고" />
-                    <span>DPS</span>
+                    <span>Aging In Place</span>
                 </div>
                 <div className='logo-bottombar'>
                     <p></p>
@@ -30,7 +30,7 @@ function MyPage() {
                 <div className='sidebar-title'>
                     <h2>마이페이지</h2>
                 </div>
-                <ul>
+                <ul className='sidebar-menu'>
                     <li onClick={() => setSelectedSection('myinfo')}>
                         <span>내 정보</span>
                     </li>
@@ -51,7 +51,6 @@ function MyPage() {
                 {selectedSection === 'editprofile' && <EditProfile />}
                 {selectedSection === 'withdraw' && <Withdraw />}
             </div>
-            
         </div>
     );
 }
