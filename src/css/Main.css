@@ -1,15 +1,15 @@
-html, body {
+/* html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-}
+} */
 
-body {
+/* body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .main-container {
   text-align: center;

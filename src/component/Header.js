@@ -9,7 +9,7 @@ const Header = () => {
         
       <div>
         <Link to="/main">
-           <img src="/images/loginlogo.jpg" alt="Your Logo"  style={{ width: '25%', height: '90px', marginLeft:'300px' }}/>
+           <img src="/images/loginlogo.png" alt="Your Logo"  style={{ width: '25%', height: '90px', marginLeft:'300px' }}/>
         </Link>
        
       </div>

@@ -3,6 +3,7 @@ import '../css/Contents.css';
 
 const ContentPage = () => {
   return (
+    <div className='content-main'>
     <div className='content-container'>
       <div>
         <div className="content-layout">
@@ -13,8 +14,7 @@ const ContentPage = () => {
               <div className="video-description-wrapper">
                 <div className="video-box">
                   <iframe 
-                    width="350"
-                    height="205"
+                    
                     src="https://www.youtube.com/embed/e_UYhqrL8ic" 
                     title="YouTube" 
                     frameborder="0" 
@@ -31,9 +31,7 @@ const ContentPage = () => {
               
               <div className="video-description-wrapper">
                 <div className="video-box">
-                  <iframe 
-                    width="350" 
-                    height="205" 
+                  <iframe  
                     src="https://www.youtube.com/embed/NjgBnx1jVIU" 
                     title="YouTube" 
                     frameborder="0" 
@@ -50,8 +48,6 @@ const ContentPage = () => {
               <div className="video-description-wrapper">
                 <div className="video-box">
                   <iframe 
-                    width="350" 
-                    height="205" 
                     src="https://www.youtube.com/embed/qqBUw9BR-Us" 
                     title="YouTube" 
                     frameborder="0" 
@@ -67,8 +63,6 @@ const ContentPage = () => {
               <div className="video-description-wrapper">
                 <div className="video-box">
                   <iframe 
-                    width="350" 
-                    height="205" 
                     src="https://www.youtube.com/embed/qivFeoW6oMQ" 
                     title="YouTube" 
                     frameborder="0" 
@@ -85,6 +79,7 @@ const ContentPage = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
