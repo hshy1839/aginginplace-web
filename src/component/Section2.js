@@ -98,7 +98,7 @@ const Section2 = ({ userData, handleInputChange, handleNext }) => {
             )}
           </div>
           <div className='genderradio-container'>
-            <div className='gender-radio'>
+            <div className='gender-radio1'>
               <label>
                 <input type="radio" name="gender" value="male" checked={gender === 'male'} onChange={handleGenderChange} />
                 남자
@@ -112,7 +112,7 @@ const Section2 = ({ userData, handleInputChange, handleNext }) => {
             </div>
           </div>
           <div className='typeradio-container'>
-            <div className='type-radio'>
+            <div className='type-radio1'>
               <label>
                 <input type="radio" name="role" value="patient" checked={role === 'patient'} onChange={handleRoleChange} />
                 환자

@@ -115,11 +115,12 @@ nav li {
   
 }
 
-a {
+
+.Header-nav a{
   color: white;
   font-size: 16px;
 }
-
-a:hover {
+.Header-nav a:hover{
   color:lightgray;
 }
+

@@ -114,9 +114,15 @@
     }
 
     .login-layout{
-      margin-top: 30%;
+      margin-top: 45%;
     }
-    .findPd{
-      
+    .form-group input{
+      margin-left: -10px;
+    }
+    .find-group a{
+      font-size: 11px;
+    }
+    .btn-primary{
+      margin-left: 15%;
     }
   }

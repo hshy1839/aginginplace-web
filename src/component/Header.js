@@ -20,16 +20,16 @@ const Header = () => {
       <nav className="nav-container">
         
         <ul>
-          <li><Link to="/Contents">프로그램 콘텐츠</Link></li>
-          <li><Link to="/page2">커뮤니티</Link></li>
-          <li><Link to="/MyPage">내정보</Link></li>
+          <li className='Header-nav'><Link to="/Contents">프로그램 콘텐츠</Link></li>
+          <li className='Header-nav'><Link to="/page2">커뮤니티</Link></li>
+          <li className='Header-nav'><Link to="/MyPage">내정보</Link></li>
         
         </ul>
       </nav>
       <div className="auth-buttons">
-        <button><Link to="/login">로그인 </Link></button>
-        <button><Link to="/signup">회원가입</Link></button>
-        <button><Link to="/signup">고객센터</Link></button>
+        <button className='Header-nav'><Link to="/login">로그인 </Link></button>
+        <button className='Header-nav'><Link to="/signup">회원가입</Link></button>
+        <button className='Header-nav'><Link to="/signup">고객센터</Link></button>
       </div>
     </header>
   );
