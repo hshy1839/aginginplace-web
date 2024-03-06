@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Page2.css';
+import '../css/Page4.css';
 
 const QnAPage = () => {
   const [posts, setPosts] = useState([
@@ -41,7 +42,7 @@ const QnAPage = () => {
         </div>
       </div>
       
-      <div className="qna-content">
+      <div className="notice-table">
         <table>
           <thead>
             <tr>

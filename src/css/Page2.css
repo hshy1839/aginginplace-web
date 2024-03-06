@@ -4,12 +4,13 @@
   
 }
 .qna-nav-ALL{
-  padding: 30px 20px;
-
+  padding: 20px 20px;
+  
   font-weight: bold;
   font-size: 22px;
-  background-color: #f0f0f0;
-  color: rgb(0, 0, 0);
+  background-color: #00487c; 
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
 }
 .aaaaaa {
   color: #0f1813; 
@@ -18,16 +19,23 @@
   font-size: 40px;
 }
 .qna-nav-item{
-  padding: 15px 20px;
+  padding: 15px 10px;
   border-radius: 10px;
+  margin-top: 10px;
+  color: rgb(74, 73, 73);
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 20px;
 }
 .qna-nav-item-Q{
+  margin-top: 10px;
   padding: 15px 20px;
   margin-right: 0px;
-  background-color: #00487c; 
-  color: #fff; 
+  background: #71bdf3;
+  color: #000000; 
   border-radius: 10px;
-  
+  font-weight: bold;
+  font-size: 20px;
 }
 .qna-nav-item-S,
 .qna-nav-item-A{
@@ -38,8 +46,8 @@
   
 }
 .qna-nav-item:hover {
-  background-color: #00487c; 
-  color: #fff; 
+  background: #71bdf3;
+  color: #000000; 
 }
 
 
@@ -48,9 +56,10 @@
   position: absolute;
   display: flex;
   margin: 15% 0 0  15%;
-  
-  width: 300px; 
-  background-color: #f0f0f0;
+  border-radius: 8px;
+
+  width: 180px; 
+  background-color: #eeecec;
 }
 .bottom{
   padding-bottom: 40px;
@@ -172,35 +181,41 @@
 .pagebtt button:hover {
   background-color: #686666;
 }
-/* 뷰포트 너비에 따라 네비게이션과 컨텐츠의 위치 조정 */
+
 @media only screen and (max-width: 768px) {
   .qna-navigation {
-    top: 0;
-    left: 0;
+    top: 50px;
+    left: -30px;
     width: 100%;
     text-align: center;
   }
-
+  .qna-options{
+    margin-top: 350px;
+  }
   .qna-header {
     margin-left: 0;
   }
 
   .qna-content {
-    margin-left: auto;
+    margin-left: 0px;
+    margin-top: -50px;
     margin-right: auto;
     width: 40%;
+    
+  }
+  .pagebtt{
+    margin-left: 180px;
   }
 }
 
-/* 화면 너비가 좁아질 때 테이블의 폰트 사이즈 줄이기 */
 @media only screen and (max-width: 600px) {
   .qna-content th,
   .qna-content td {
-    font-size: 16px;
+    font-size: 10px;
   }
 }
 
-/* 화면 너비가 좁아질 때 네비게이션 아이템들을 더 작은 크기로 만들기 */
+
 @media only screen and (max-width: 500px) {
   .qna-nav-item,
   .qna-nav-item-Q,
@@ -209,4 +224,5 @@
     padding: 10px;
     font-size: 14px;
   }
+
 }

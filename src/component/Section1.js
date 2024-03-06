@@ -10,20 +10,17 @@ const Section1 = ({ handleNext }) => {
     const newAllAgreed = !allAgreed;
     setAllAgreed(newAllAgreed);
     setAgreement1(newAllAgreed);
-    setAgreement2(newAllAgreed);
   };
 
   const handleIndividualCheck = (agreement) => {
     if (agreement === 1) {
       setAgreement1(!agreement1);
-    } else if (agreement === 2) {
-      setAgreement2(!agreement2);
     }
-    setAllAgreed(agreement1 && agreement2);
+    setAllAgreed(agreement1);
   };
 
   const handleNextButton = () => {
-    if (agreement1 && agreement2) {
+    if (agreement1) {
       handleNext();
     } else {
       alert('동의가 필요합니다.');

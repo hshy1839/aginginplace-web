@@ -1,19 +1,46 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Login.css';
+import axios from 'axios';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [saveId, setSaveId] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Username:', username);
-    console.log('Password:', password);
-    console.log('Save ID:', saveId);
+  
+    
+    if (!username || !password) {
+      alert('아이디와 비밀번호를 입력하세요.');
+      return;
+    }
+  
+    try {
+      const response = await axios.post('/api/login', {
+        username,
+        password
+      });
+  
+      if (response.status === 200) {
+       
+        const user = response.data;
+        if (user) {
+          window.location.href = '/main'; 
+        } else {
+          alert('아이디 또는 비밀번호를 확인하세요.');
+        }
+      } else {
+        alert('서버 오류가 발생했습니다.');
+      }
+    } catch (error) {
+      console.error('로그인 오류:', error);
+      alert('로그인 중 오류가 발생했습니다.');
+    }
   };
-
+  
+  
+  
   return (
     <div className='login-container'>
       <div>
@@ -28,15 +55,6 @@ const Login = () => {
                 </div>
                 <div className="form-group">
                   <input type="password" id="password" title="비밀번호" name="password" value={password} onChange={(e) => setPassword(e.target.value)} className="form-control flush" placeholder="비밀번호" />
-                </div>
-                <div className="form-group">
-                  <input type="checkbox" name="saveId" id="saveId" className="sr-only" checked={saveId} onChange={() => setSaveId(!saveId)} />
-                  <label htmlFor="saveId" className="custom-label custom-label-sm">
-                    <span className="check-primary">
-                      <i className="xi-check"></i>
-                      아이디 저장
-                    </span>
-                  </label>
                 </div>
                 <div className="find-group">
                   <Link to="/signup" className="text-primary">
