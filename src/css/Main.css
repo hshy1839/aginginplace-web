@@ -110,4 +110,17 @@
   .mainmain{
     padding-top: 60px;
   }
+  .main-bttcontainer button{
+    font-size: 12px;
+    margin-top: -10px;
+  }
+  .sul11{
+    font-size: 12px;
+  }
+  .testsiz{
+    font-size: 15px;
+  }
+  .sul111{
+    font-size: 10px;
+  }
 }

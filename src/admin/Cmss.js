@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, useLocation  } from 'react-router-dom';
 import '../css/Cms.css';
 
 const Cmss = () => {
@@ -7,34 +7,30 @@ const Cmss = () => {
     { id: 1, type: '공지사항',title: '공지사항제목1', author: '관리자', date: '2024-01-01',description:'공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 ' },
     { id: 2, type: '공지사항',title: '공지사항제목2', author: '매니저', date: '2024-01-21' },
     { id: 3, type: '공지사항',title: '공지사항제목3', author: '관리자', date: '2024-01-11' },
-
-
-
   ]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(3); 
-  const [selectedPost, setSelectedPost] = useState(null);
+  const [selectedPostIndex, setSelectedPostIndex] = useState(null);
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const [selectedPostIndex, setSelectedPostIndex] = useState(null);
-
 
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
   const handleClick = (index) => {
     setSelectedPostIndex(index);
   };
+
+  const location = useLocation(); 
   return (
     <>
       <div className="sidebar">
         <img src="/images/logo192.png" alt="Your Logo" />
-        <p>MenuPage</p>
+        <h2>관리자 페이지</h2>
         <ul>
-          <li><Link to="/Cms">Home</Link></li>
-          <li><Link to="/Cmscontents">프로그램 컨텐츠 </Link></li>
-          <li><Link to="/Cmss">게시판 관리</Link></li>
-          <li><Link to="/Cmsuser">사용자 관리</Link></li>
+          <li className="cms-item"><Link to="/Cmscontents">프로그램 컨텐츠</Link></li>
+          <li className={`cms-item ${location.pathname === "/Cmss" ? "cms-active" : ""}`}><Link to="/Cmss">게시판 관리</Link></li>
+          <li className="cms-item"><Link to="/Cmsuser">사용자 관리</Link></li>
         </ul>
       </div>
       <div className="cms-container">
@@ -88,9 +84,7 @@ const Cmss = () => {
                           <div className='sang-bttcon'>
                             <button className='sang-btt'>게시글 수정</button>
                             <button className='sang-btt'>게시글 삭제</button>
-                          </div>
-
-                          
+                          </div>      
                         </div>
                       </td>
                     </tr>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes, useLocation } from 'react-router-dom';
 import '../css/Cms.css';
 import '../css/Cmscontents.css';
 
@@ -8,67 +8,61 @@ const Cmss = () => {
     { id: 1, type: '콘텐츠',title: '우울', author: '관리자', date: '2024-01-01',description:'우울에대한 설명 콘텐츠 설명 우울에대한 설명 콘텐츠 설명 우울에대한 설명 콘텐츠 설명 우울에대한 설명 콘텐츠 설명 우울에대한 설명 콘텐츠 설명 우울에대한 설명 콘텐츠 설명 우울에대한 설명 콘텐츠 설명  ' },
     { id: 2, type: '콘텐츠2',title: '수면장애', author: '매니저', date: '2024-01-21' },
     { id: 3, type: '콘텐츠3',title: '심장질환', author: '관리자', date: '2024-01-11' },
-
-
-
   ]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(3); 
-  const [selectedPost, setSelectedPost] = useState(null);
-
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const [selectedPostIndex, setSelectedPostIndex] = useState(null);
-
 
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
   const handleClick = (index) => {
     setSelectedPostIndex(index);
   };
+
+  const location = useLocation(); 
+
   return (
     <>
       <div className="sidebar">
         <img src="/images/logo192.png" alt="Your Logo" />
-        <p>MenuPage</p>
+        <h2>관리자 페이지</h2>
         <ul>
-          <li><Link to="/Cms">Home</Link></li>
-          <li><Link to="/Cmscontents">프로그램 컨텐츠 </Link></li>
-          <li><Link to="/Cmss">게시판 관리</Link></li>
-          <li><Link to="/Cmsuser">사용자 관리</Link></li>
+          <li className={`cms-item ${location.pathname === "/Cmscontents" ? "cms-active" : ""}`}>
+            <Link to="/Cmscontents">프로그램 컨텐츠</Link>
+          </li>
+          <li className={`cms-item ${location.pathname === "/Cmss" ? "cms-active" : ""}`}>
+            <Link to="/Cmss">게시판 관리</Link>
+          </li>
+          <li className={`cms-item ${location.pathname === "/Cmsuser" ? "cms-active" : ""}`}>
+            <Link to="/Cmsuser">사용자 관리</Link>
+          </li>
         </ul>
       </div>
       <div className="cms-container">
-
-      <div className="Cmss-header">
-        <h2>프로그램 콘텐츠 관리</h2>
-
-        <div className="Cmss-options">
-          
-          <select className="Cmss-select">
-            <option value="title">제목</option>
-            <option value="author">작성자</option>
-          </select>
-          <input type="text" placeholder="검색어를 입력하세요" className="Cmss-search" />
-          <button className="Cmss-button">검색</button>
+        <div className="Cmss-header">
+          <h2>프로그램 콘텐츠 관리</h2>
+          <div className="Cmss-options">
+            <select className="Cmss-select">
+              <option value="title">제목</option>
+              <option value="author">작성자</option>
+            </select>
+            <input type="text" placeholder="검색어를 입력하세요" className="Cmss-search" />
+            <button className="Cmss-button">검색</button>
+          </div>
         </div>
-
-      </div>
-      
-      <div className="Cmss-content">
-        <table>
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>분류</th>
-              <th>제목</th>
-              <th>작성자</th>
-              <th>등록일</th>
-            </tr>
-          </thead>
-          <tbody >
-          {posts.map((post, index) => (
-                
+        <div className="Cmss-content">
+          <table>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>분류</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>등록일</th>
+              </tr>
+            </thead>
+            <tbody >
+              {posts.map((post, index) => (
                 <React.Fragment key={post.id}>
                   <tr onClick={() => handleClick(index)}>
                     <td>{post.id}</td>
@@ -87,14 +81,11 @@ const Cmss = () => {
                              <p className='sang-contents2'>첨부내용</p>
                              <button className='sang-contents3'>첨부파일</button>
                           </div>
-                          
                           <p className='sang-description'>{post.description}</p>
                           <div className='sang-bttcon'>
                             <button className='sang-btt'>게시글 수정</button>
                             <button className='sang-btt'>게시글 삭제</button>
                           </div>
-
-                          
                         </div>
                       </td>
                     </tr>
@@ -103,15 +94,14 @@ const Cmss = () => {
               ))}
             </tbody>
           </table>
-        <Pagination
-          postsPerPage={postsPerPage}
-          totalPosts={posts.length}
-          paginate={paginate}
-        />
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={posts.length}
+            paginate={paginate}
+          />
+        </div>
       </div>
-    </div>
     </>
-    
   );
 };
 
