@@ -24,27 +24,25 @@ function MyPage() {
                     <img src="/images/logo-small.png" alt="로고" />
                     <span>Aging In Place</span>
                 </div>
-                <div className='logo-bottombar'>
-                    <p></p>
-                </div>
+
                 <div className='sidebar-title'>
                     <h2>마이페이지</h2>
                 </div>
-                <ul className='sidebar-menu'>
-                    <li onClick={() => setSelectedSection('myinfo')}>
-                        <span>내 정보</span>
-                    </li>
-                    <li onClick={() => setSelectedSection('changepassword')}>
-                        <span>비밀번호 변경</span>
-                    </li>
-                    <li onClick={() => setSelectedSection('editprofile')}>
-                        <span>개인정보 수정</span>
-                    </li>
-                    <li onClick={() => setSelectedSection('withdraw')}>
-                        <span>회원탈퇴</span>
-                    </li>
-                </ul>
-            </div>
+                    <ul className='sidebar-menu'>
+                        <li onClick={() => setSelectedSection('myinfo')}>
+                            <span>내 정보</span>
+                        </li>
+                        <li onClick={() => setSelectedSection('changepassword')}>
+                            <span>비밀번호 변경</span>
+                        </li>
+                        <li onClick={() => setSelectedSection('editprofile')}>
+                            <span>개인정보 수정</span>
+                        </li>
+                        <li onClick={() => setSelectedSection('withdraw')}>
+                            <span>회원탈퇴</span>
+                        </li>
+                    </ul>
+                </div>
             <div className="content">
                 {selectedSection === 'myinfo' && <MyInfo />}
                 {selectedSection === 'changepassword' && <ChangePassword />}

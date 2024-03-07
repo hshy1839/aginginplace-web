@@ -1,6 +1,6 @@
  .myinfo-container {
      background-color: white;
-     width: auto;
+     width: 50%;
      height: auto;
      display: flex;
      flex-direction: column;
@@ -8,11 +8,13 @@
      align-items: center;
      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
      margin-left: 5%;
+     margin-top: -100px;
  }
 
  @media only screen and (max-width: 1100px) {
     .myinfo-container {
         width: 130%;
+        margin-top: 10px;
     }
 
     .myinfo-context-container input {
@@ -21,13 +23,15 @@
     } 
 }
 
- .myinfo-title {
+ .myinfo-title {  
      margin-bottom: 10px;
+     margin-top: 10%;
  }
+ 
 
  .myinfo-title strong {
      text-align: left;
-     font-size: 38px;
+     font-size: 28px;
      margin-left: 40px;
      font-weight: bolder;
  }
