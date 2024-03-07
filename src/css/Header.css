@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1px 20px; /* 수정된 부분: 20x가 아니라 20px로 수정 */
+  padding: 1px 20px;
   background-color:#1877F2;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
   width: 100%;
@@ -56,12 +56,6 @@ nav li {
 .logo img {
   width: 50px;
   height: 50px;
-}
-
-@media (max-width: 960px) {
-  .nav-container {
-    display: none; 
-  }
 }
 
 .nav-container ul li {
@@ -115,12 +109,59 @@ nav li {
   
 }
 
-
+.Header-signupbtt a,
+.Header-loginbtt a,
 .Header-nav a{
   color: white;
   font-size: 16px;
 }
+
+.Header-signupbtt a:hover,
+.Header-loginbtt a:hover,
 .Header-nav a:hover{
   color:lightgray;
 }
 
+
+.hadervar-logo{
+  width: 25%;
+  margin-left: 90%;
+}
+
+.Header-loginbtt{
+
+}
+
+@media (max-width: 500px) {
+
+  .hadervar-logo{
+    width: 10px;
+    
+    margin-left: 90%;
+  }
+  .auth-buttons button{
+    margin-right: -30px;
+  }
+  .auth-buttons button a{
+    font-size: 12px;
+    
+  }
+  .Header-loginbtt{
+    margin-left: 70px;
+  }
+
+.Header-nav{
+  font-size: 12px;
+}
+.hadervar-logo {
+  width: 50px; /* 폰 화면 크기에 맞는 적절한 너비로 조정 */
+  height:auto; /* 높이를 자동으로 조정하여 비율 유지 */
+  margin-left: 10px;
+}
+}
+@media (max-width: 960px) {
+  .nav-container {
+    display: none; 
+  }
+
+}

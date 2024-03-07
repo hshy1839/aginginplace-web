@@ -9,12 +9,9 @@ const Header = () => {
         
       <div>
         <Link to="/main">
-           <img src="/images/loginlogo.png" alt="Your Logo"  style={{ width: '25%', height: '90px', marginLeft:'300px' }}/>
+           <img src="/images/loginlogo.png" alt="Your Logo" className='hadervar-logo'/>
         </Link>
-       
-      </div>
-      <div className="logo">
-
+   
       </div>
 
       <nav className="nav-container">
@@ -27,8 +24,8 @@ const Header = () => {
         </ul>
       </nav>
       <div className="auth-buttons">
-        <button className='Header-nav'><Link to="/login">로그인 </Link></button>
-        <button className='Header-nav'><Link to="/signup">회원가입</Link></button>
+        <button className='Header-loginbtt'><Link to="/login">로그인 </Link></button>
+        <button className='Header-signupbtt'><Link to="/signup">회원가입</Link></button>
         <button className='Header-nav'><Link to="/signup">고객센터</Link></button>
       </div>
     </header>

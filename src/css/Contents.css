@@ -69,10 +69,38 @@ body {
     }
     
     @media screen and (max-width: 735px) {
-      .description-box p {
-        display: none;
+      .video-description-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px; 
+        margin-left: -50px;
       }
+    
+      .video-box {
+        position: static; 
+        width: 100%;
+        margin-bottom: 20px;
+        
+      }
+    
+      .description-box {
+        width: 100%;
+        margin-top: 10px;
+      }
+    
       .description-box a {
-        display: none;
+        font-size: 16px;
+      }
+    
+      .description-box p {
+        font-size: 14px;
+      }
+      .video-box iframe {
+        width: 100%;
+        height: auto; 
+        max-width: 100%; 
+        margin-left: -40px;
       }
     }
+    
