@@ -85,27 +85,27 @@
 
 @media only screen and (max-width: 768px) {
   .main-container {
-    padding: 0 10px; /* 왼쪽과 오른쪽 여백을 줄입니다. */
+    padding: 0 10px; 
   }
 
   .sul1, .sul2 {
-    width: 80%; /* 내용의 너비를 조정합니다. */
-    padding: 1% 5%; /* 내용의 패딩을 조정합니다. */
+    width: 80%; 
+    padding: 1% 5%; 
   }
 
   .mainbtt {
-    width: 80%; /* 버튼 컨테이너의 너비를 조정합니다. */
-    padding: 10px 2%; /* 버튼의 패딩을 조정합니다. */
+    width: 80%; 
+    padding: 10px 2%;
   }
 
   .sul1,
   .main-bttcontainer button {
-    font-size: 17px; /* 버튼의 폰트 크기를 조정합니다. */
+    font-size: 17px;
   }
 
 
   .testsiz {
-    font-size: 20px; /* 버튼의 폰트 크기를 조정합니다. */
+    font-size: 20px;
   }
   .mainmain{
     padding-top: 60px;

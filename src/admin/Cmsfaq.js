@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes ,useLocation} from 'react-router-dom';
 import '../css/Cms.css';
 import Useradd from './Useradd';
 
@@ -27,17 +27,18 @@ const Cmss = () => {
 
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
+  const location = useLocation(); 
+
 
   return (
     <>
       <div className="sidebar">
         <img src="/images/logo192.png" alt="Your Logo" />
-        <p>MenuPage</p>
+        <h2>관리자 페이지</h2>
         <ul>
-          <li><Link to="/Cms">Home</Link></li>
-          <li><Link to="/Cmscontents">프로그램 컨텐츠 </Link></li>
-          <li><Link to="/Cmss">게시판 관리</Link></li>
-          <li><Link to="/Cmsuser">사용자 관리</Link></li>
+          <li className="cms-item"><Link to="/Cmscontents">프로그램 컨텐츠</Link></li>
+          <li className={`cms-item ${location.pathname === "/Cmss" ? "cms-active" : ""}`}><Link to="/Cmss">게시판 관리</Link></li>
+          <li className="cms-item"><Link to="/Cmsuser">사용자 관리</Link></li>
         </ul>
       </div>
       <div className="cms-container">

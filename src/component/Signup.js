@@ -32,23 +32,23 @@ const Signup = () => {
   };
 
   const handleNext = async () => {
-    if (section === 2 && !checkAllInputs()) {
-      alert('모두 입력해주세요.');
-    } else {
-      if (section === 2) {
-        if (userData.password !== userData.confirmPassword) {
-          setPasswordMatch(false);
-          return;
-        }
-        try {
-          const response = await axios.post('/api/signup', userData); // 서버에 POST 요청
-          console.log('User signed up successfully:', response.data);
-        } catch (error) {
-          console.error('Error signing up:', error.response.data.error);
-        }
+  if (section === 2) { 
+      if (!checkAllInputs()) {
+       
+        return;
       }
-      setSection(section + 1);
+      if (userData.password !== userData.confirmPassword) {
+        setPasswordMatch(false);
+        return;
+      }
+      try {
+        const response = await axios.post('/api/signup', userData); 
+        console.log('User signed up successfully:', response.data);
+      } catch (error) {
+        console.error('Error signing up:', error.response.data.error);
+      }
     }
+    setSection(section + 1);
   };
 
   const checkAllInputs = () => {
@@ -57,6 +57,8 @@ const Signup = () => {
       userData.password !== '' &&
       userData.confirmPassword !== '' &&
       userData.email !== '' &&
+      userData.role !== '' &&
+      userData.gender !== '' &&
       userData.name !== '' &&
       userData.birthdate !== '' &&
       userData.phoneNumber !== ''

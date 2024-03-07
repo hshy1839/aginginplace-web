@@ -24,13 +24,34 @@ const Section2 = ({ userData, handleInputChange, handleNext }) => {
 
   const handleNextClick = () => {
     if (isFormComplete()) {
+      if (!emailId || !emailDomain || (showCustomDomain && !customDomain)) {
+        alert('이메일을 입력하거나 옵션을 선택하세요.');
+        return;
+      }
       const email = showCustomDomain ? `${emailId}@${customDomain}` : `${emailId}@${emailDomain}`;
       handleInputChange({ target: { name: 'email', value: email } });
+      handleInputChange({ target: { name: 'role', value: role } }); 
       handleNext(); 
     } else {
-      alert('모든 내용을 입력해주세요.');
+      if (userData.username === '') {
+        alert('아이디를 입력하세요.');
+      } else if (userData.password === '') {
+        alert('비밀번호를 입력하세요.');
+      } else if (userData.confirmPassword === '') {
+        alert('비밀번호 확인을 입력하세요.');
+      } else if(userData.password !== userData.confirmPassword){
+        alert('비밀번호와 비밀번호확인이 틀립니다.')
+      } else if (userData.name === '') {
+        alert('이름을 입력하세요.');
+      } else if (userData.birthdate === '') {
+        alert('생년월일을 입력하세요.');
+      } else if (userData.phoneNumber === '') {
+        alert('휴대전화번호를 입력하세요.');
+      } 
+      
     }
   };
+  
 
   const handleEmailIdChange = (e) => {
     const { value } = e.target;
