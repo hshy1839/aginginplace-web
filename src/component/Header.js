@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+// Header.js
+
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../AuthContext';
 import '../css/Header.css';
 
 const Header = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { isLoggedIn } = useAuth();
 
   const handleLogout = () => {
-    setIsLoggedIn(false);
+   
   };
 
   return (

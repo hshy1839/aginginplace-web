@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom';
 import '../css/Login.css';
 import axios from 'axios';
 
-const Login = () => {
+const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
   
-    
     if (!username || !password) {
       alert('아이디와 비밀번호를 입력하세요.');
       return;
@@ -23,9 +22,9 @@ const Login = () => {
       });
   
       if (response.status === 200) {
-       
         const user = response.data;
         if (user) {
+          onLogin(true);
           window.location.href = '/main'; 
         } else {
           alert('아이디 또는 비밀번호를 확인하세요.');
@@ -35,12 +34,10 @@ const Login = () => {
       }
     } catch (error) {
       console.error('로그인 오류:', error);
-      alert('로그인 중 오류가 발생했습니다.');
+      alert('아이디 또는 비밀번호를 확인하세요.');
     }
   };
-  
-  
-  
+
   return (
     <div className='login-container'>
       <div>
