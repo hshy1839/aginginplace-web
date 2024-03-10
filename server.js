@@ -43,6 +43,24 @@ app.post('/api/signup', (req, res) => {
     res.status(200).send('회원가입 성공');
   });
 });
+app.post('/api/login', (req, res) => {
+  const { username, password } = req.body;
+
+  const query = `SELECT * FROM members WHERE username = ? AND password = ?`;
+
+  connection.query(query, [username, password], (err, result) => {
+    if (err) {
+      console.error('로그인 실패: ' + err.stack);
+      res.status(500).send('로그인 실패');
+      return;
+    }
+    if (result.length === 0) {
+      res.status(401).send('아이디 또는 비밀번호가 올바르지 않습니다.');
+      return;
+    }
+    res.status(200).json(result[0]);
+  });
+});
 
 app.get('/', (req, res) => {
   res.send('Welcome to the Aging In Place API!');
