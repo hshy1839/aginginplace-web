@@ -1,15 +1,12 @@
-// Header.js
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useAuth } from '../AuthContext';
 import '../css/Header.css';
 
-const Header = () => {
-  const { isLoggedIn } = useAuth();
+const Header = ({ isLoggedIn, onLogout }) => {
 
   const handleLogout = () => {
-   
+ 
+    onLogout();
   };
 
   return (
@@ -28,7 +25,7 @@ const Header = () => {
       <div className="auth-buttons">
         {isLoggedIn ? (
           <>
-            <button className='Header-nav' onClick={handleLogout}>로그아웃</button>
+            <button className='Header-nav' onClick={onLogout}>로그아웃</button>
             <button className='Header-nav'><Link to="/mypage">내정보</Link></button>
           </>
         ) : (

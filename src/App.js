@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { AuthProvider } from './component/AuthContex';
 import Header from './component/Header';
 import Login from './component/Login';
 import Signup from './component/Signup';
@@ -21,35 +20,50 @@ import Cmsuser from './admin/Cmsuser';
 import Cmsfaq from './admin/Cmsfaq'
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = (loginStatus) => {
+    setIsLoggedIn(loginStatus);
+  };
+
   return (
     <BrowserRouter>
-      <AuthProvider>
-        <div className="App">
-          <Routes>
-            <Route path="/" element={<><Header /><Main /></>} />
-            <Route path="/login" element={<><Header /><Login /><Footer /></>} />
-            <Route path="/signup" element={<><Header /><Signup /><Footer /></>} />
-            <Route path="/Idppl" element={<><Header /><Idppl /><Footer /></>} />
-            <Route path="/Passwordppl" element={<Passwordppl />} />
-            <Route path="/page2" element={<><Header /><Page2 /><Footer /></>} />
-            <Route path="/page3" element={<><Header /><Page3 /><Footer /></>} />
-            <Route path="/page4" element={<><Header /><Page4 /><Footer /></>} />
-            <Route path="/Page5" element={<><Header /><Page5 /><Footer /></>} />
-            <Route path="/main" element={<> <Header /> <Main /> </>} />
-            <Route path="/login" element={<> <Header /><Login /><Footer /> </>} />
-            <Route path="/MyPage" element={<> <Header /><MyPage /><Footer /> </>} />
-            <Route path="/signup" element={<> <Header /><Signup /><Footer /> </>} />
-            <Route path="/cmss" element={<Cmss />} />
-            <Route path="/cmsuser" element={<Cmsuser />} />
-            <Route path="/cmsfaq" element={<Cmsfaq />} />
-            <Route path="/cms" element={<Cms />} />
-            <Route path="/Cmscontents" element={<Cmscontents />} />
-            <Route path="/contents" element={<> <Header /><Contents /><Footer /> </>} />
-          </Routes>
-        </div>
-      </AuthProvider>
+      <div className="App">
+        <Header isLoggedIn={isLoggedIn} />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/login" element={<Login onLogin={handleLogin} />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/Idppl" element={<Idppl />} />
+          <Route path="/Passwordppl" element={<Passwordppl />} />
+          <Route path="/page2" element={<Page2 />} />
+          <Route path="/page3" element={<Page3 />} />
+          <Route path="/page4" element={<Page4 />} />
+          <Route path="/Page5" element={<Page5 />} />
+          <Route path="/main" element={<Main />} />
+          <Route path="/MyPage" element={<MyPage />} />
+          <Route path="/contents" element={<Contents />} />
+
+
+          <Route path="/cms/*" element={<CmsLayout />} />
+        </Routes>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }
+
+
+const CmsLayout = () => {
+  return (
+    <Routes>
+      <Route path="/cms" element={<Cms />} />
+      <Route path="/cmsuser" element={<Cmsuser />} />
+      <Route path="/cmsfaq" element={<Cmsfaq />} />
+      <Route path="/cmss" element={<Cmss />} />
+      <Route path="/Cmscontents" element={<Cmscontents />} />
+    </Routes>
+  );
+};
 
 export default App;
