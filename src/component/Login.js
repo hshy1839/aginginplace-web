@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../css/Login.css';
 import axios from 'axios';
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const history = useHistory(); 
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,7 +27,7 @@ const Login = ({ onLogin }) => {
         const user = response.data;
         if (user) {
           onLogin(true); 
-          history.push('/main');
+          navigate('/main'); 
         } else {
           alert('아이디 또는 비밀번호를 확인하세요.');
         }

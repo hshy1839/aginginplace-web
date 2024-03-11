@@ -1,12 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom'; 
 import '../css/Header.css';
 
 const Header = ({ isLoggedIn, onLogout }) => {
-
-  const handleLogout = () => {
- 
-    onLogout();
+  const handleLogout = async () => {
+    window.location.href = '/main';
   };
 
   return (
@@ -25,7 +23,7 @@ const Header = ({ isLoggedIn, onLogout }) => {
       <div className="auth-buttons">
         {isLoggedIn ? (
           <>
-            <button className='Header-nav' onClick={onLogout}>로그아웃</button>
+            <button className='Header-nav' onClick={handleLogout}>로그아웃</button>
             <button className='Header-nav'><Link to="/mypage">내정보</Link></button>
           </>
         ) : (
