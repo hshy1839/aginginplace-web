@@ -28,7 +28,7 @@ const Header = ({ isLoggedIn, onLogout }) => {
           </>
         ) : (
           <>
-            <button className='Header-loginbtt'><Link to="/login">로그인</Link></button>
+            <button className='Header-loginbtt'><Link to="/login">로그잉</Link></button>
             <button className='Header-signupbtt'><Link to="/signup">회원가입</Link></button>
           </>
         )}
