@@ -7,6 +7,7 @@ ssh ec2-user@15.164.57.70 <<EOF
     nvm install 21.6.2
     npm install
     npm install -g pm2
+    npm run build
     pm2 restart ecosystem.config.js
     exit
 EOF
